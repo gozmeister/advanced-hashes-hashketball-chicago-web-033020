@@ -115,7 +115,7 @@ def game_hash
   }
 end
 
-def player_stats(player_name)
+def find_player_stats(player_name)
   home = game_hash[:home][:players]
   away = game_hash[:away][:players]
   home_index = 0
@@ -137,13 +137,17 @@ def player_stats(player_name)
     end
   end
 
+def player_stats(player_name)
+  player = find_player_stats(player_name)
+end
+
 def num_points_scored(player_name)
-  player = player_stats(player_name)
+  player = find_player_stats(player_name)
   player[:points]
 end
 
 def shoe_size(player_name)
-  player = player_stats(player_name)
+  player = find_player_stats(player_name)
   player[:shoe]
 end
 
