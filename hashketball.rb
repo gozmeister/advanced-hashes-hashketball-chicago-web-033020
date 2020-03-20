@@ -212,5 +212,6 @@ def rebounds(player_name)
 end
 
 def big_shoe_rebounds
-  big_shoes.max
+  big_shoes.max_by do |name, shoe_size| shoe_size
+  nam
 end
