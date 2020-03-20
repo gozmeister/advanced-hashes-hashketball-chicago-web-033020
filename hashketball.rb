@@ -191,7 +191,9 @@ def big_shoes
 end
 
 def rebounds(player_name)
-  
+  player = find_player_stats(player_name)
+  player[:rebounds]
+end
 
 def big_shoe_rebounds
 end
