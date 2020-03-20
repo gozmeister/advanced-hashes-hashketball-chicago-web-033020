@@ -212,6 +212,7 @@ def rebounds(player_name)
 end
 
 def big_shoe_rebounds
-  big_shoes.max_by do |name, shoe_size| shoe_size
-  nam
+  biggest_shoes = big_shoes.max_by do |name, shoe_size| shoe_size
+  player_name = biggest_shoes[0]
+  rebounds(player_name)
 end
