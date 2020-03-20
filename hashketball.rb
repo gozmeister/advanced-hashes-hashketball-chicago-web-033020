@@ -188,6 +188,23 @@ def player_numbers(team_name)
 end
 
 def big_shoes
+  hash_of_shoe_sizes = {}
+  home_team_name = game_hash[:home][:team_name]
+  away_team_name = game_hash[:away][:team_name]
+  home_players = players(home_team_name)
+  away_players = players(away_team_name)
+
+  home_players.each do |stat|
+    name = stat[:player_name]
+    hash_of_shoe_sizes[name] = stat[:shoe]
+  end
+
+  away_players.each do |stat|
+    name = stat[:player_name]
+    hash_of_shoe_sizes[name] = stat[:shoe]
+  end
+
+  hash_of_shoe_sizes
 end
 
 def rebounds(player_name)
@@ -196,4 +213,5 @@ def rebounds(player_name)
 end
 
 def big_shoe_rebounds
+  
 end
