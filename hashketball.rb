@@ -176,8 +176,7 @@ def player_numbers(team_name)
   numbers_array = []
   team_array = players(team_name)
   team_array.each do |player|
-    binding.pry
-    player[:number] << numbers_array
+    numbers_array << player[:number]
   end
   numbers_array
 end
