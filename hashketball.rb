@@ -163,3 +163,21 @@ def team_names
   end
   list_of_names
 end
+
+def players(team_name)
+  game_hash.each do |home_or_away, value|
+    if value[:team_name] == team_name
+      return value[:players]
+        end
+    end
+end
+
+def player_numbers(team_name)
+  numbers_array = []
+  team_array = players(team_name)
+  team_array.each do |player|
+    binding.pry
+    team_array[:number] << numbers_array
+  end
+  numbers_array
+end
