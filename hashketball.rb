@@ -212,5 +212,5 @@ def rebounds(player_name)
 end
 
 def big_shoe_rebounds
-  
+  big_shoes.max
 end
