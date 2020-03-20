@@ -203,7 +203,6 @@ def big_shoes
     name = stat[:player_name]
     hash_of_shoe_sizes[name] = stat[:shoe]
   end
-
   hash_of_shoe_sizes
 end
 
