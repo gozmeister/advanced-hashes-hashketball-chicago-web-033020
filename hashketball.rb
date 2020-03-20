@@ -140,6 +140,7 @@ def find_player_stats(player_name)
 def player_stats(player_name)
   player = find_player_stats(player_name)
   player.delete(:player_name)
+  player
 end
 
 def num_points_scored(player_name)
